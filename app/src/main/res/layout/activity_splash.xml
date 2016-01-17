@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_activity_splash"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SplashActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/splash_bg"/>
+
+    <!-- 为什么放到imageView前面就看不见文本-->
+    <TextView
+        android:id="@+id/tv_activity_splash_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_activity_splash_version"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="新闻客户端"
+        android:textColor="#fff"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/tv_activity_splash_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="版本1.0"
+        android:textColor="#fff"
+        android:textSize="15sp"/>
+
+
+</RelativeLayout>

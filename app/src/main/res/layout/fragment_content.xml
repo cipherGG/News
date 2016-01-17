@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/title_red_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="新闻客户端"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+
+        <!-- 默认首页不可见-->
+        <ImageButton
+            android:id="@+id/ib_fragment_content_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@mipmap/img_menu"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <RadioGroup
+        android:id="@+id/rg_fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bottom_tab_bg"
+        android:orientation="horizontal">
+
+        <!-- 第一个默认选中-->
+        <RadioButton
+            android:id="@+id/rb_fragment_home"
+            style="@style/radioGroup"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_rb_home"
+            android:text="首页"/>
+
+        <RadioButton
+            android:id="@+id/rb_fragment_newscenter"
+            style="@style/radioGroup"
+            android:drawableTop="@drawable/selector_rb_newscenter"
+            android:text="新闻中心"/>
+
+        <RadioButton
+            android:id="@+id/rb_fragment_smartservice"
+            style="@style/radioGroup"
+            android:drawableTop="@drawable/selector_rb_smartservice"
+            android:text="智慧服务"/>
+
+        <RadioButton
+            android:id="@+id/rb_fragment_govaffairs"
+            style="@style/radioGroup"
+            android:drawableTop="@drawable/selector_rb_govaffairs"
+            android:text="政务"/>
+
+        <RadioButton
+            android:id="@+id/rb_fragment_setting"
+            style="@style/radioGroup"
+            android:drawableTop="@drawable/selector_rb_setting"
+            android:text="设置"/>
+    </RadioGroup>
+</LinearLayout>
